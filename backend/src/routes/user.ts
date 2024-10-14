@@ -91,3 +91,11 @@ try{
     return c.json({message : "Server Error"})
 }
 })
+
+
+userRouter.post('follow', async(c) =>{
+  const prisma = new PrismaClient({
+      datasourceUrl: c.env.DATABASE_URL,
+  }).$extends(withAccelerate())
+  
+})

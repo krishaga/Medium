@@ -34,7 +34,6 @@ blogRouter.use('/*', async(c, next)=> {
 
 
 blogRouter.post('/post', async(c) => {
-    console.log("Hi from inside")
     const prisma = new PrismaClient({
         datasourceUrl: c.env.DATABASE_URL,
       }).$extends(withAccelerate())
@@ -61,8 +60,6 @@ blogRouter.put('/:id', async (c) => {
       }).$extends(withAccelerate())
     const body = await c.req.json();
     const id = c.req.param('id');
-    console.log(id)
-    console.log(c.get("userId"))
     const blog = await prisma.post.update({
         where : {
             id : id
@@ -84,7 +81,6 @@ return c.json({
 //Todo Add : Pagination
 
 blogRouter.get('/bulk', async(c) => {
-    console.log("Hello")
     const prisma = new PrismaClient({
         datasourceUrl: c.env.DATABASE_URL,
       }).$extends(withAccelerate())

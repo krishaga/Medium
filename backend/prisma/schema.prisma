@@ -30,3 +30,11 @@ model Post {
   author    User     @relation(fields: [authorId], references: [id])
   authorId  String
 }
+
+model Follow{
+  follow_id String @id @default(uuid())
+  follower_id String
+  followe_id String
+  timestamp DateTime @default(now())
+}
+
