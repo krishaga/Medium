@@ -1,0 +1,20 @@
+.hr-toolbar {
+    @apply flex gap-2 mb-4 border border-gray-300 p-2 rounded;
+  }
+  
+  .hr-toolbar button {
+    @apply p-2 cursor-pointer bg-transparent border-0;
+  }
+  
+  .hr-toolbar button:hover {
+    @apply bg-gray-100;
+  }
+  
+  .hr-editor {
+    @apply border border-gray-300 p-4 min-h-[200px] rounded overflow-y-auto;
+  }
+  
+  .preview {
+    @apply mt-4 border-t pt-4;
+  }
+  
