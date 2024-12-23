@@ -2,9 +2,15 @@ import { Quote } from "../Components/Quote"
 import { InputBox } from "../Components/InputBox"
 import { Button } from "../Components/Button"
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
 
 export const Singup = () => {
     const navigate = useNavigate();
+    const handleSingup = async () => {
+        const response = await axios.post("http://localhost:3000/api/v1/user/signup",{
+            
+        })
+    }
     return<div className = "grid grid-cols-2">
         <div className = "flex flex-col items-center justify-center">     
             <div className="flex flex-col items-center justify-center">
